@@ -120,7 +120,7 @@
                                             </div>
                                             <!-- /.submenu-wrapper -->
                                         </li>
-                                        <li class="active"><a href="contact.html">Contactanos</a></li>
+                                        <li class="active"><a href="conctact.php">Contactanos</a></li>
                                         <li><a href="http://sysver.verniearchitect.com">Entrar</a></li>
                                     </ul>
                                 </div>
@@ -171,7 +171,7 @@
                                         <div class="mini-contact">
                                             <h2>Enterate de nostros:</h2>
 
-                                            <a href="https://www.facebook.com/verniearchitects/"> Nuestro Facebook →</a>
+                                            <a href="https://www.facebook.com/verniearchitects/"> Vernie Architect →</a>
                                         </div>
                                     </div>
                                 </div>
@@ -211,7 +211,7 @@
                                     <h2>Dejanos un mensaje </h2>
 
 
-                                    <form id="contactForm" action="sendemail.php" method="POST">
+                                    <form id="contactForm" action="conctact.php" method="POST">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="input-group">
@@ -233,7 +233,7 @@
                                                 <div class="input-group">
                                                     <label class="sr-only" for="phone">Celular</label>
                                                     <span class="input-group-addon" id="basic-addon3"><i class="fa fa-phone"></i></span>
-                                                    <input id="phone" name="phone" type="text" class="form-control" placeholder="Celular/telefono">
+                                                    <input id="phone" name="phone" type="number" class="form-control" placeholder="Celular/telefono">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -252,6 +252,26 @@
                                         </div>
 
                                         <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+
+                                        <?php
+                                        if (isset($_POST['btn'])){
+                                            $nombre = $_POST['name'];
+                                            $correo = $_POST['email'];
+                                            $titulo = $_POST['subject'];
+                                            $mensaje = $_POST['message'];
+                                            $celular = $_POST['phone'];
+
+                                            $email = "Nombre: ".$nombre."\n"."Asunto: ".$titulo. "\n"."Mensaje: ".$mensaje."\n"."Correo: ".$correo."\n"."Celular: ". $celular;
+
+                                            $to = "oficina.vernie@gmail.com";
+                                            $subject = "##CONTACTO DESDE LA PAGINA VERNIE ARCHITECT ##";
+                                            $txt = "Sugerencias de los clientes";
+                                            $headers = "From: verniearchitect.com" . "\r\n" .
+                                                "CC: leo_l_11@hotmail.com";
+                                            mail($to,$subject,$email,$headers);
+                                        }
+                                       ?>
+
                                     </form>
                                 </div>
 
@@ -264,81 +284,81 @@
 
 
                     <section class="footer-widget-wrapper">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="footer-widget">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="footer-widget">
 
-                                        <h3 class="wow fadeInDown">Subscribe to newsletter</h3>
+                                            <h3 class="wow fadeInDown">Subscribe to newsletter</h3>
 
-                                        <form class="wow fadeInDown">
-                                            <div class="form-group">
-                                                <label class="sr-only" for="exampleInputEmail1">Direccion de correo</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Correo">
+                                            <form class="wow fadeInDown">
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="exampleInputEmail1">Direccion de correo</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Correo">
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                            </form>
+
+                                            <div class="social-link wow fadeInDown">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                </ul>
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Enviar</button>
-                                        </form>
-
-                                        <div class="social-link wow fadeInDown">
-                                            <ul>
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </div>
+                                        <!-- /.footer-widget -->
+                                    </div>
+                                    <!-- /.col-md-6 -->
+                                    <div class="col-md-2 col-sm-4 col-xs-4">
+                                        <div class="footer-widget">
+                                            <h3 class="wow fadeInDown">Nuestros servicios</h3>
+                                            <ul class="wow fadeInDown">
+                                                <li><a href="#">Customer Support</a></li>
+                                                <li><a href="#">Platinum Support</a></li>
+                                                <li><a href="#">Gold Support</a></li>
+                                                <li><a href="#">Standard Support</a></li>
+                                                <li><a href="#">Training</a></li>
+                                                <li><a href="#">Online Training</a></li>
+                                                <li><a href="#">Custom Training</a></li>
                                             </ul>
                                         </div>
+                                        <!-- /.footer-widget -->
                                     </div>
-                                    <!-- /.footer-widget -->
-                                </div>
-                                <!-- /.col-md-6 -->
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="footer-widget">
-                                        <h3 class="wow fadeInDown">NUESTROS SERVICIOS</h3>
-                                        <ul class="wow fadeInDown">
-                                            <li><a href="#">Customer Support</a></li>
-                                            <li><a href="#">Platinum Support</a></li>
-                                            <li><a href="#">Gold Support</a></li>
-                                            <li><a href="#">Standard Support</a></li>
-                                            <li><a href="#">Training</a></li>
-                                            <li><a href="#">Online Training</a></li>
-                                            <li><a href="#">Custom Training</a></li>
-                                        </ul>
+                                    <!-- /.col-md-2 -->
+                                    <div class="col-md-2 col-sm-4 col-xs-4">
+                                        <div class="footer-widget">
+                                            <h3 class="wow fadeInDown">Nuestro Facebook</h3>
+                                            <ul class="wow fadeInDown">
+                                                <div class="fb-page" data-href="https://www.facebook.com/verniearchitects/" data-tabs="timeline" data-width="300" data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                                    <blockquote cite="https://www.facebook.com/verniearchitects/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/verniearchitects/">Vernie Architect&#039;s</a></blockquote>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                        <!-- /.footer-widget -->
                                     </div>
-                                    <!-- /.footer-widget -->
-                                </div>
-                                <!-- /.col-md-2 -->
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="footer-widget">
-                                        <h3 class="wow fadeInDown">Nuestro Facebook</h3>
-                                        <ul class="wow fadeInDown">
-                                            <div class="fb-page" data-href="https://www.facebook.com/verniearchitects/" data-tabs="timeline" data-width="300" data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                                                <blockquote cite="https://www.facebook.com/verniearchitects/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/verniearchitects/">Vernie Architect&#039;s</a></blockquote>
-                                            </div>
-                                        </ul>
+                                    <!-- /.col-md-2 -->
+                                    <div class="col-md-2 col-sm-4 col-xs-4">
+                                        <div class="footer-widget">
+                                            <h3 class="wow fadeInDown">Contacto</h3>
+                                            <ul class="wow fadeInDown">
+                                                <li><a href="https://www.facebook.com/verniearchitects/">Vernie Architect</a></li>
+                                                <li><a href="mailto:vernie.architect.sac@gmail.com">vernie.architect.sac@gmail.com</a></li>
+                                                <li><a href="https://www.google.com/maps/place/Vernie+Architect/@-11.9879802,-76.8387621,17z/data=!3m1!4b1!4m5!3m4!1s0x9105c262bdd4ca73:0xb1049ec80a9136cc!8m2!3d-11.9879802!4d-76.8387621">
+                                                    Av. Balaguer Lt. 10A5 Frente Pta. 1 Universidad Peruana Unión
+                                                    Ñaña Chosica - Lurigancho - Lima - Lima</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- /.footer-widget -->
                                     </div>
-                                    <!-- /.footer-widget -->
+                                    <!-- /.col-md-2 -->
                                 </div>
-                                <!-- /.col-md-2 -->
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="footer-widget">
-                                        <h3 class="wow fadeInDown">CONTACTO</h3>
-                                        <ul class="wow fadeInDown">
-                                            <li><a href="#">Contact Center</a></li>
-                                            <li><a href="#">Knowledge</a></li>
-                                            <li><a href="#">Management</a></li>
-                                            <li><a href="#">Web Self-Service</a></li>
-                                            <li><a href="#">Performance Metrics</a></li>
-                                        </ul>
-                                    </div>
-                                    <!-- /.footer-widget -->
-                                </div>
-                                <!-- /.col-md-2 -->
+                                <!-- /.row -->
                             </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.container -->
-                    </section>
+                            <!-- /.container -->
+                        </section>
 
 
                     <footer class="footer-wrapper">
