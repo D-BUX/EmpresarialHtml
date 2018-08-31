@@ -378,53 +378,55 @@
 
         <!-- ======== OFFCANVAS MENU ========= -->
         <div class="offcanvas-menu offcanvas-effect visible-xs">
-            <button type="button" class="close" aria-hidden="true" data-toggle="offcanvas" id="off-canvas-close-btn">&times;</button>
-            <h3>Menu</h3>
-            <div>
+                <button type="button" class="close" aria-hidden="true" data-toggle="offcanvas" id="off-canvas-close-btn">&times;</button>
+                <h3>Menu</h3>
                 <div>
-                    <ul>
-                        <li><a href="#">Home</a>
-                            <ul>
-                                <li><a href="index.html"><i class="fa fa-home"></i>Ir a inicio de pagina</a></li>
-                            </ul>
-                        </li>
+                    <div>
+                        <ul>
+                            <li><a href="#">Home</a>
+                                <ul>
+                                    <li><a href="index.html"><i class="fa fa-home"></i>Ir a inicio de pagina</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a href="#">Vernie Architect</a>
-                            <ul>
-                                <li><a href="about-us.html"><i class="fa fa-life-ring"></i> Nosotros</a></li>
-                                <li><a href="http://leonel.verniearchitect.com"><i class="fa fa-user"></i> Vernie Leonel </a></li>
-                            </ul>
-                        </li>
+                            <li><a href="#">Vernie Architect</a>
+                                <ul>
+                                    <li><a href="about-us.html"><i class="fa fa-life-ring"></i> Conócenos</a></li>
+                                    <li><a href="http://leonel.verniearchitect.com"><i class="fa fa-user"></i> Conoce a Leonel </a></li>
+                                    <li><a href="#"><i class="fa fa-user"></i>Trabaja con nosotros</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a href="#">Portafolio</a>
-                            <ul>
-                                <li class="active"><a href="portfolio-three.html"><i class="fa fa-paper-plane-o"></i> Proyectos</a></li>
-                            </ul>
-                        </li>
+                            <li><a href="#">Servicios </a>
+                                <ul>
+                                    <li><a href="clients-page.html"><i class="fa fa-coffee"></i> Nuestros Clientes</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a href="#">Pages</a>
-                            <ul>
-                                <li><a href="job-page.html"><i class="fa fa-briefcase"></i> Job Page</a></li>
-                                <li><a href="clients-page.html"><i class="fa fa-coffee"></i> Clients Page</a></li>
-                            </ul>
-                        </li>
+                            <li><a href="#">Portafolio</a>
+                                <ul>
+                                    <li class="active"><a href="portfolio-three.html"><i class="fa fa-paper-plane-o"></i> Proyectos</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a href="#">Cantactanos</a>
-                            <ul>
-                                <li><a href="contact.html"><i class="fa fa-envelope-o"></i> Informacion de Vernie</a></li>
-                            </ul>
-                        </li>
+                            
 
-                        <li><a href="#">SYSVER</a>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
-                            </ul>
-                        </li>
+                            <li><a href="#">Cantacto</a>
+                                <ul>
+                                    <li><a href="contact.html"><i class="fa fa-envelope-o"></i> ¿Quiénes somos?</a></li>
+                                </ul>
+                            </li>
 
-                    </ul>
+                            <li><a href="#">SYSVER</a>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
         <!-- .offcanvas-menu -->
     </div>
     <!-- /st-container -->
