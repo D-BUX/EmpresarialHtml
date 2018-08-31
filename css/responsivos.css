@@ -1,0 +1,35 @@
+/* Por debajo de 700px */
+        @media screen and (max-width: 900px){
+            #text_label{
+                font-size:1.5em;
+            }
+            #text_label2{
+                    font-size:1.5em;
+            }
+            #inner {
+                font-size:1.5em;
+            }
+            #inner2{
+                text-align: center;
+                float: left;
+                width: 150px;
+            }
+        }
+        /* Por debajo de 400px */
+        @media screen and (max-width: 400px){
+            #text_label{
+                font-size:1em;
+            }
+            #text_label2{
+                    font-size:1.5em;
+            }
+            #inner {
+                font-size:1.5em;
+            }
+            #inner2{
+                text-align: center;
+                float: left;
+                width: 150px;
+            }
+        }
+    
